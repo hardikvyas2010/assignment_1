@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="http://www.executivefranchises.com/wp-content/uploads/2013/08/pizza-franchises.jpg" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="script/pizza.js"></script>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+      <div class="row">
+          <div class=col-md-4></div>
+      </div>
+        <ul class="pull-left">
+          <li><h1> Conestoga Pizzeria</h1></li>
+          
+        </ul>
+        <ul class="pull-right">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log In</a></li>
+       
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Best place to buy your PIZZA.</h1>
+        <p>Choose from various variety.....</p>
+       
+      </div>
+    </div> 
+
+    <div class="learn-more">
+	  <div class="container">
+		<div>
+	      
+		 
+		<form name="pizza" id="pizza" onsubmit = "return calculatecost()">
+
+			
+		<p><fieldset>	
+			<h3><legend><bold>Pizza Size</bold></legend></h3>
+				<p>
+					<label><input type = "radio" name = "size" value = "5.00"  id="sm"/> Small ($5.00) </label>
+					<label><input type = "radio" name = "size" value = "8.00"  id="me"/> Medium ($8.00) </label>
+					<label><input type = "radio" name = "size" value = "10.00" id="la"/> Large ($10.00) </label>
+					<label><input type = "radio" name = "size" value = "12.00" id="el"/> Extra Large ($12.00) </label>
+		</fieldset></p>
+	
+
+
+	
+		<p><fieldset>		
+			<h3><legend><bold>Pizza Crust</bold></legend></h3>
+				<p>
+  					<label><input type = "radio"   name = "handtossedpizza"  value="1.00" id="handtossedpizza"/> Hand Tossed Pizza ($1.00) </label>
+  					<label><input type = "radio"   name = "panpizza"  	value="1.00" id="panpizza"/> Pan Pizza ($1.00) </label>
+					<label><input type = "radio"   name = "thinncrispy""  	value="1.00" id="thinncrispy""/> Thin & Crispy ($1.00) </label>
+				</p>	
+	
+		</fieldset></p>	
+  				
+
+
+
+			<p><fieldset>
+			<h3><legend><bold>Cheese Preference</bold></legend></h3>
+			<p>
+			<label><input type = "radio"  name ="L" value = "0.50"  id = "L" />Light Cheese($0.50)</label>
+			<label><input type = "radio"  name ="M" value = "0.50"  id = "M" />Medium Cheese($0.50)</label>
+  			<label><input type = "radio"  name ="E" value = "1.00"  id = "E" />Extra Cheese($1.00)</label>
+			</p>
+			</fieldset></p>	
+			
+
+			
+			<p><fieldset>
+			<h3> <legend><bold>Toppings </bold></legend></h2>
+					
+					
+
+					<p>
+					<h4><legend>Veg Toppings</legend></h4>
+					<P>
+					<label><input type = "checkbox" name = "topping" value = "1.00"  id = "Tomatoes" /> Tomatoes ($1.00)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.00"  id = "Pineapple" /> Pineapple ($1.00)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.00"  id = "Mushrooms" /> Mushrooms ($1.00)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.00"  id = "Blackolives" /> Black Olives ($1.00)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.00"  id = "Greenpeppers" /> Green Peppers ($1.00)</label>
+					</p>
+					
+					
+
+					
+					<p>
+					
+					<h4><legend>Non Veg Toppings</legend></h4>
+					<p>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Beef" /> Beef ($1.50)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Bacon" /> Bacon ($1.50)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Salami" /> Salami ($1.50)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Classicmeatball" /> Classic Meat Ball ($1.50)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Ham" /> Ham ($1.50)</label>
+					<label><input type = "checkbox" name = "topping" value = "1.50"  id = "Chicken" />  Chicken ($1.50)</label>				
+					</p>
+			</fieldset></p>
+					
+
+
+
+			
+
+
+
+
+				<p><fieldset>
+				<h3><legend><bold>Payment Method</bold></legend></h3>
+				<label><input type = "radio" name = "methodofpayment" value = "Cash" id ="Cash" /> Cash </label>
+				<label><input type = "radio" name = "methodofpayment" value = "Card" id ="Card" /> Card </label>
+				</fieldset></p>
+		
+
+
+
+		
+	
+			
+			<p><fieldset>
+			<h3><legend><bold>Customer Information</bold></legend></h3>
+			
+			
+			<table id="customerdetails">
+      				<tr> <td>First Name</td>
+       				<td><label><input type="text" name="cfirstname"  title = "Please enter your first name" size="20" required/></label></td></tr>
+      				
+				<tr> <td>Last Name</td>
+       				<td><label><input type="text" name="clastname"  title = "Please enter your last name" size="20" required//></label></td></tr>
+
+				<tr><td>Street Address</td>
+        			<td><label><input type="text" name="caddress"  title = "Please enter your address" size="20" required//></label></td></tr>
+
+				<tr><td>City</td>
+        			<td><label><input type="text" name="ccity"  title = "Please enter your city" size="20" required//></label></td></tr>
+      				
+				<tr><td>Zip Code</td>
+        			<td><label><input type="text" name="czip"  title = "Please enter your zip code" size="20" required//></label></td></tr>
+
+				<tr><td>Contact No.</td>
+        			<td><label><input type="text" name="cphone"  title = "Please enter your contact number" size="20" required//></label></td></tr>
+				
+				<tr><td>Email id</td>
+        			<td><label><input type="text" name="cemail"  title = "Please enter your email id" size="20" required//></label></td></tr>
+			</table>
+			
+			
+
+
+
+
+			<textarea rows="5" cols="34" name="message" id="message" tabindex="12" > Your Comments </textarea>
+			</fieldset></p>	
+			
+
+
+
+			
+			<p><fieldset>
+			<h2><legend><bold>Pizza Delivery Options</bold></legend></h2>
+     		 	<label> <input type = "radio"  name = "deliverymode"  value = "dine-in"  id= "dine-in" /> Dine-In</label>
+     		 	<label> <input type = "radio"  name = "deliverymode"  value = "delivery" id= "delivery" /> Delivery</label>
+	 	 	<label> <input type = "radio"  name = "deliverymode"  value = "pick-up" id=  "pick-up" /> Pick-up</label>
+			</fieldset></p>
+		
+			
+
+
+
+					
+			<p>
+        			<input class="button" type="submit" value="Submit" name="submit" id="submit"/></label>
+        			<input class="button" type="reset" value="Reset" name="reset" id="reset" /></label>
+    			</p>
+		
+			</fieldset></p>
+
+		</form>
+	    </div>
+	  </div>
+	</div>
+  </body>
+</html>
